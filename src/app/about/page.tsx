@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <div className="container mx-auto w-8/12">
+        <div className="container mx-auto h-screen mt-10 w-8/12">
             <h1>About</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium tempore quibusdam esse. Veniam, inventore distinctio corporis ducimus molestiae dicta perspiciatis repudiandae, quod recusandae ad odit aspernatur alias fugit quibusdam quisquam.
             Qui officia fugit rerum iusto dolores obcaecati laborum eveniet nostrum culpa nihil itaque quia nulla, doloribus rem repudiandae enim! Officiis voluptatibus illum maxime libero cupiditate officia aperiam deserunt aspernatur eligendi.

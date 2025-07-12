@@ -16,7 +16,7 @@ export default function NotFound() {
                 <h4 className="mt-2 text-center font-bold">
                     Page Not Found
                 </h4>
-                <Button className='mt-4' href='/'>Home</Button>
+                <Button className='mt-4 link link-hover' href='/'>Home</Button>
             </div>
         
 

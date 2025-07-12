@@ -9,7 +9,7 @@ export default function Accessories() {
       useEffect(() => {
         if (data) {
           // Filter data setelah di-fetch dan di-cache oleh SWR
-          const filtered = data?.filter(product => product.category === "jewelery");
+          const filtered = data?.filter((product: { category: string; }) => product.category === "jewelery");
           setElectronicProducts(filtered);
         }
       }, [data]);
