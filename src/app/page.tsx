@@ -18,9 +18,9 @@ export default function Home() {
           </div>
         ))}
       </div>
-        {error && <p>{error}</p>}
-        {isLoading && <p>Loading...</p>}
-    {!error && !isLoading && data?.length === 0 && <p>No products found.</p>}
+      {error && <p>{error}</p>}
+      {isLoading && <span className="loading loading-spinner loading-xl"></span>}
+      {!error && !isLoading && data?.length === 0 && <p>No products found.</p>}
     </div>
   );
 }

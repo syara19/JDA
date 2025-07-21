@@ -2,8 +2,13 @@ import Link from "next/link";
 import { JSX, useMemo } from "react";
 import { twMerge } from "tailwind-merge";
 
-export default function Button({ type = "button", href, children, className, isLoading, disabled, ...props }: { type?: "submit" | "button", href?: string, children?: string | JSX.Element, className?: string, isLoading?: boolean, disabled?: boolean }): JSX.Element {
-  const finalClassName = useMemo(() => twMerge("btn btn-secondary", className), [className])
+export default function Button({
+  type = "button", title, href, children, className, isLoading, disabled, onClick, ...props }: {
+    type?: "submit" | "button", href?: string, children?: string | JSX.Element, title?: string, className?: string, isLoading?: boolean, disabled?: boolean, onClick?: () => void
+  }): JSX.Element {
+
+  const finalClassName = useMemo(() => twMerge("btn ", className), [className])
+
 
   if (href) {
     return (
@@ -19,6 +24,8 @@ export default function Button({ type = "button", href, children, className, isL
       type={type}
       className={finalClassName}
       disabled={disabled || isLoading}
+      onClick={onClick}
+      title={title}
       {...props}
     >
       {isLoading ? (
